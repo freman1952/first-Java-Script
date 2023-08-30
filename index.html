@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>My First JavaScript</title>
+</head>
+<body>
+ <script>
+var drink = "Energy Drink"; 
+//Declare a variable, and assign it a
+value of “Energy Drink”.
+var lyrics = "";
+//Declare another variable and assign it empty string value.
+var cans = 99; 
+//Declare another variable and assign it a number value, 99.
+while (cans > 0) {
+/*This is a while loop. It says, while
+the number of cans is greater than
+0, do everything between the curly
+brackets. Stop when there are no
+cans left.*/
+lyrics = lyrics + cans + " cans of "
+/*Add the next line of the song to
+the variable lyrics, using the string
+concatenation operator “+”.*/
++ drink + " on the wall <br>"; 
+//End the line with a HTML line break.
+lyrics = lyrics + cans + " cans of " 
+  /*Do it again—after all that’s how the
+song goes, right?*/
++ drink + "<br>";
+lyrics = lyrics + "Take one down, pass it around,<br>";
+  //d the next verse, again using concatentation.
+if (cans > 1) { 
+  /*If there’s still a can left (that is,
+the value of cans is greater than 1)...*/
+lyrics = lyrics + (cans-1) + " cans of " ... 
+//add the last line.
++ drink + " on the wall <br>";
+}
+else { 
+//otherwise, there are no cans left...
+lyrics = lyrics + "No more cans of " ... 
+/*so add “No more cans” to the end
+of lyrics.*/
++ drink + " on the wall <br>";
+}
+cans = cans - 1; 
+//Reduce the number of cans left by 1
+}
+document.write(lyrics);
+  </script>
+ </body>
+</html>
